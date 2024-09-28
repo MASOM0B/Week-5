@@ -4,31 +4,38 @@
 
 (i) Amino acid count excluding the stop codon 
 
-```
-aa_sequence_no_gap = aa_sequence.replace("-", "")
-
-num_amino_acids = len(aa_sequence_no_gap) - 1
-
-print(num_amino_acids)
+Python Code:
 
 ```
+def aa(aa_sequence):
+    aa_sequence_no_gap = aa_sequence.replace("-", "")
+    num_amino_acids = len(aa_sequence_no_gap) - 1
+    print(num_amino_acids)
 
-Output = 
+aa_sequence = "KVRMFTSELDIMLSVNG-PADQIKYFCRHWT*"
+aa(aa_sequence)
+
+```
+run command: python3 aa.py
+Output = 30
 
 (ii) Bases count including the stop codon
 
+Python Code:
+
 ```
+def bases(aa_sequence):
+    aa_sequence_no_gap = aa_sequence.replace("-", "")
+    num_amino_acids = len(aa_sequence_no_gap) - 1
+    num_bases = (num_amino_acids + 1) * 3
+    print(num_bases)
+
 aa_sequence = "KVRMFTSELDIMLSVNG-PADQIKYFCRHWT*"
-
-aa_sequence_no_gap = aa_sequence.replace("-", "")
-
-num_bases = (num_amino_acids + 1) * 3  # +1 to include stop codon
-
-print(num_bases)
-
+bases(aa_sequence)
 ```
+command = python3 bases.py
 
-Output =
+Output = 93
 
 ## 2:
 
@@ -48,7 +55,7 @@ prodigal -i /home/masom0b/ncbi_dataset/week_5/ncbi_dataset/data/GCA_000006745.1/
 
 ```
 
-Output =
+Output = 
 
 (ii) Max Gene Count Strain
 
