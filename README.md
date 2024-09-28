@@ -34,6 +34,11 @@ Output =
 
 (i)  Prodigal on 1 downloaded genome
 
+E.coli from Ibex --> Home Directory
+
+cd /ibex/scratch/hohndor/bioe-2024/e.coli/GCA_000005845.2
+cp -r /ibex/scratch/hohndor/bioe-2024/e.coli/GCA_000005845.2 /home/masom0b/ncbi_dataset/week_5
+
 ```
 
 module load prodigal/2.6.3
