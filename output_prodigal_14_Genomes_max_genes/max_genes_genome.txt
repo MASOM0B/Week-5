@@ -1,0 +1,1 @@
+The genome with the highest number of genes is: GCF_000006745.1_ASM674v1_genomic 3594
