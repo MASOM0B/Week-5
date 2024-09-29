@@ -154,7 +154,7 @@ echo "CDS counts have been saved to $results_file"
 
 ```
 
-Output =
+Output = prokka_results.txt
 
 (ii) Thoughts on differences
 
@@ -187,16 +187,13 @@ grep -h "gene=" /home/masom0b/ncbi_dataset/week_5/prokka_output_CDS/*/*.gff | se
 
 ```
 
-Output = 
-
-unique_gene_names.txt
+Output = unique_gene_names.txt
 
 
-(ii) First 5 unique gene names
+(ii) First 5 unique gene names from all .gff made after I ran Prokka 
 
 ```
 head -n 5 unique_gene_names.txt
-
 ```
 
 Output = 
@@ -209,14 +206,34 @@ aaeB
 ## 6 CRISPR CAS FINDER
 
 gitclone
-cd crispr
+cd CRISPR
+
 
 (i) Download
 anaconda
 C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5 both here
 https://www.anaconda.com/download?utm_source=anacondadoc&utm_medium=documentation&utm_campaign=download&utm_content=topnavalldocs
 installed in users bcz space
+powershell of anaconda
+cd C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5
+conda create --prefix ./myenv python=3.9
+conda activate ./myenv
+conda install numpy pandas biopython
+conda install jupyter
+python crispr.py
+jupyter notebook
+(C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5\myenv) PS C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5> conda config --add channels conda-forge
+(C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5\myenv) PS C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5> conda config --add channels bioconda
+conda install -c anaconda perl
+conda install -c bioconda 
+conda install perl-bio-semtools
 
+
+cd WEEK 5
+$env:Path += ";C:\Users\PTCL\Anaconda3;C:\Users\PTCL\Anaconda3\Scripts;C:\Users\PTCL\Anaconda3\condabin" #pathtemp
+conda --verison
+conda create --name bioe230 python=3.9
+conda activate bioe230
 
 ```
 
