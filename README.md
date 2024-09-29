@@ -236,7 +236,9 @@ conda create --name bioe230 python=3.9
 conda activate bioe230
 
 ```
-
+[masom0b@login509-02-r CRISPRCasFinder]$ perl CRISPRCasFinder.pl -in install_test/sequence.fasta -cas -cf CasFinder-2.0.3 -def G -keep
+Can't locate Bio/AlignIO.pm in @INC (you may need to install the Bio::AlignIO module) (@INC contains: /usr/local/lib64/perl5/5.32 /usr/local/share/perl5/5.32 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5) at CRISPRCasFinder.pl line 30.
+BEGIN failed--compilation aborted at CRISPRCasFinder.pl line 30.
 ```
 
 Output =
