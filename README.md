@@ -73,8 +73,8 @@ nano forloop_prodigal.sh
 for loop script code 
 
 ```
-base_dir="/home/masom0b/ncbi_dataset/week_5/ncbi_dataset/data"
-output_dir="/home/masom0b/ncbi_dataset/week_5/outputs"
+base_dir="/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data"
+output_dir="/home/masom0b/ncbi_dataset/last_week/outputs"
 
 mkdir -p "$output_dir"
 
@@ -121,8 +121,8 @@ gitpush: connect and push like the last assi
 (i) Prokka x 28 + CDS 
 
 ```
-base_dir="/home/masom0b/ncbi_dataset/week_5/ncbi_dataset/data"
-output_dir="/home/masom0b/ncbi_dataset/week_5/prokka_output_CDS"
+base_dir="/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data"
+output_dir="/home/masom0b/ncbi_dataset/last_week/prokka_output_CDS"
 
 mkdir -p "$output_dir"
 
@@ -183,7 +183,7 @@ prodigal: CDS oriented
 (i) Unique gene names
 
 ```
-grep -h "gene=" /home/masom0b/ncbi_dataset/week_5/prokka_output_CDS/*/*.gff | sed 's/.*gene=//' | sed 's/;.*//' | sort | uniq > unique_gene_names.txt
+grep -h "gene=" /home/masom0b/ncbi_dataset/last_week/prokka_output_CDS/*/*.gff | sed 's/.*gene=//' | sed 's/;.*//' | sort | uniq > unique_gene_names.txt
 
 ```
 
@@ -211,11 +211,11 @@ cd CRISPR
 
 (i) Download
 anaconda
-C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5 both here
+C:\Users\PTCL\Desktop\1st_sem\BioE230\week_5 both here
 https://www.anaconda.com/download?utm_source=anacondadoc&utm_medium=documentation&utm_campaign=download&utm_content=topnavalldocs
 installed in users bcz space
 powershell of anaconda
-cd C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5
+cd C:\Users\PTCL\Desktop\1st_sem\BioE230\week_5
 conda create --prefix ./myenv python=3.9
 conda activate ./myenv
 conda install numpy pandas biopython
@@ -259,3 +259,4 @@ Output =
 ```
 
 Output =
+
