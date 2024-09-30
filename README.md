@@ -117,6 +117,10 @@ gitpush: connect and push like the last assi
 
 
 ## 4
+command to write:
+```
+nano forloop_prokka.sh
+```
 
 (i) Prokka x 28 + CDS 
 
@@ -137,11 +141,9 @@ for dir in "$base_dir"/*/; do
 
         prokka_output_dir="$output_dir/${base_name}_prokka_output"
 
-        # Annotate using Prokka or Prodigal (adjusted for Prodigal here)
         prokka --outdir "$prokka_output_dir" --prefix "$base_name" --force "$fna_file" --quiet
 
         gff_file="$prokka_output_dir/${base_name}.gff"
-        # Adjust for Prodigal output: Count lines with CDS entries (look for 'ID=')
         cds_count=$(grep -c "ID=" "$gff_file")
 
         echo "Genome: $base_name" >> "$results_file"
@@ -182,6 +184,8 @@ prodigal: CDS oriented
 
 (i) Unique gene names
 
+Command:
+
 ```
 grep -h "gene=" /home/masom0b/ncbi_dataset/last_week/prokka_output_CDS/*/*.gff | sed 's/.*gene=//' | sed 's/;.*//' | sort | uniq > unique_gene_names.txt
 
@@ -192,6 +196,7 @@ Output = unique_gene_names.txt
 
 (ii) First 5 unique gene names from all .gff made after I ran Prokka 
 
+Command:
 ```
 head -n 5 unique_gene_names.txt
 ```
