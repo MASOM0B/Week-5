@@ -67,8 +67,13 @@ Output = 2383
 (i) Prodigal x 28 
 
 Commands to initiate the prodigal loop file
+
 ```
+touch forloop_prodigal.sh
 nano forloop_prodigal.sh
+chmod +x forloop_prodigal.sh
+./forloop_prodigal.sh
+
 ```
 for loop script code 
 
@@ -117,12 +122,25 @@ gitpush: connect and push like the last assi
 
 
 ## 4
-command to write:
+commands:
 ```
+touch forloop_prokka.sh
 nano forloop_prokka.sh
+chmod +x forloop_prokka.sh
+./forloop_prokka.sh
 ```
 
 (i) Prokka x 28 + CDS 
+
+command:
+
+```
+touch
+
+
+```
+
+forloop script: 
 
 ```
 base_dir="/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data"
@@ -153,21 +171,21 @@ for dir in "$base_dir"/*/; do
 done
 
 echo "CDS counts have been saved to $results_file"
-
 ```
-
 Output = prokka_results.txt
 
 (ii) Thoughts on differences
 
 Prodigal Output Files:
-
+```
 .gbk
 .faa
 .ffn
+```
 
 Prokka Output Files:
 
+```
 .gff
 .gbk
 .faa
@@ -175,8 +193,9 @@ Prokka Output Files:
 .fna
 .txt
 .sqn
+```
 
-and I noticed that Prokka actually used Prodigal and the number of genes were slightly different 
+And I noticed that Prokka actually used Prodigal and the number of genes were slightly different 
 prokka: Comprehensive genome annotation Annotates CDS, tRNAs, rRNAs, pseudogenes, and non-coding elements Functional annotation using databases ; takes a lot more time to run
 prodigal: CDS oriented 
 
@@ -202,17 +221,18 @@ head -n 5 unique_gene_names.txt
 ```
 
 Output = 
+```
 aaaT
 aaeA
 aaeA_1
 aaeA_2
 aaeB
+```
 
 ## 6 CRISPR CAS FINDER
 
 gitclone
 cd CRISPR
-
 
 (i) Download
 anaconda
