@@ -311,8 +311,7 @@ for dir in "$base_dir"/*/; do
         crispr_output_dir="$output_dir/${base_name}_crispr_output"
         mkdir -p "$crispr_output_dir"
 
-        perl "$crisprcasfinder_dir/CRISPRCasFinder.pl" -in "$fna_file" -out "$crispr_output_dir" -cas -drpt #ChatGPT 3.5 was used to ask the correct syntax of the perl command beacuse I wa>
-        crispr_summary_file="$crispr_output_dir/CRISPR-Cas_summary.txt"
+        perl "$crisprcasfinder_dir/CRISPRCasFinder.pl" -in "$fna_file" -out "$crispr_output_dir" -cas -drpt > crispr_summary_file="$crispr_output_dir/CRISPR-Cas_summary.txt" #ChatGPT 3.5 was used to ask the correct syntax of the perl command
         if [[ -f "$crispr_summary_file" ]]; then
             num_crispr=$(grep -c "CRISPR" "$crispr_summary_file")
         else
