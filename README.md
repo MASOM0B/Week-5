@@ -278,18 +278,7 @@ Can't locate Bio/AlignIO.pm in @INC (you may need to install the Bio::AlignIO mo
 BEGIN failed--compilation aborted at CRISPRCasFinder.pl line 30.
 ```
 
-Output =
-
-(ii) Install
-
-
-```
-
-```
-
-Output =
-
-(iii) How many Arrays in a tabular fashion 
+I was getting a message after running that I have some package missing and after installing it (took a long time), it said I needed linux and I couldn't figure that out on windows
 
 ```
 
