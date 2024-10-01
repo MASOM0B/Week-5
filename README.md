@@ -186,6 +186,29 @@ echo "CDS counts have been saved to $results_file"
 ```
 Output = prokka_results.txt
 
+```
+grep -h "CDS count" prokka_output_CDS/* | cut -d':' -f2
+
+```
+CDS COUNT
+
+```
+ 3713
+ 2105
+ 2464
+ 3214
+ 1618
+ 1911
+ 3302
+ 1053
+ 1822
+ 936
+ 1100
+ 1545
+ 1825
+ 1094
+```
+
 (ii) Thoughts on differences
 
 Prodigal Output Files:
