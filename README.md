@@ -123,13 +123,16 @@ echo "$max_genome : $max_genes genes" | tee "$output_dir/max_genes_genome.txt"
 ```
 
 command:
+
 ```
 chmod +x forloop_prodigal.sh
 ./forloop_prodigal.sh
 ```
+
 ```
 Output = GCF_000006745.1_ASM674v1_genomic : 3594 genes
 ```
+
 ```
 Output =
 GCF_000006745.1_ASM674v1_genomic 3594
@@ -147,13 +150,11 @@ GCF_000008785.1_ASM878v1_genomic 1505
 GCF_000027305.1_ASM2730v1_genomic 1748
 GCF_000091085.2_ASM9108v2_genomic 1057 
 ```
-git push: 
-git add 
-git commit -m name
-git push 
 
 ## 4
+
 commands:
+
 ```
 touch forloop_prokka.sh
 nano forloop_prokka.sh
@@ -204,10 +205,10 @@ done
 echo "CDS counts have been saved to $results_file"
 
 ```
-Output = prokka_results.txt ( 3589 max CDS count )
-
+Output = prokka_results.txt - Max CDS Count ( CF_000006745.1/GCF_000006745.1_ASM674v1_genomic.fna : 3589 )
 ```
-CDS COUNTS ALL 
+```
+CDS COUNTS ALL:
 
 ```
 /home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000007125.1/GCF_000007125.1_ASM712v1_genomic.fna: 3150
@@ -284,42 +285,12 @@ aaeB
 
 ## 6 CRISPR CAS FINDER
 
-gitclone
-cd CRISPR
-
-(i) Download
-anaconda
-C:\Users\PTCL\Desktop\1st_sem\BioE230\week_5 both here
-https://www.anaconda.com/download?utm_source=anacondadoc&utm_medium=documentation&utm_campaign=download&utm_content=topnavalldocs
-installed in users bcz space
-powershell of anaconda
-cd C:\Users\PTCL\Desktop\1st_sem\BioE230\week_5
-conda create --prefix ./myenv python=3.9
-conda activate ./myenv
-conda install numpy pandas biopython
-conda install jupyter
-python crispr.py
-jupyter notebook
-(C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5\myenv) PS C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5> conda config --add channels conda-forge
-(C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5\myenv) PS C:\Users\PTCL\Desktop\1st_sem\BioE230\Week_5> conda config --add channels bioconda
-conda install -c anaconda perl
-conda install -c bioconda 
-conda install perl-bio-semtools
-
-
-cd WEEK 5
-$env:Path += ";C:\Users\PTCL\Anaconda3;C:\Users\PTCL\Anaconda3\Scripts;C:\Users\PTCL\Anaconda3\condabin" #pathtemp
-conda --verison
-conda create --name bioe230 python=3.9
-conda activate bioe230
-
 ```
-[masom0b@login509-02-r CRISPRCasFinder]$ perl CRISPRCasFinder.pl -in install_test/sequence.fasta -cas -cf CasFinder-2.0.3 -def G -keep
-Can't locate Bio/AlignIO.pm in @INC (you may need to install the Bio::AlignIO module) (@INC contains: /usr/local/lib64/perl5/5.32 /usr/local/share/perl5/5.32 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5) at CRISPRCasFinder.pl line 30.
-BEGIN failed--compilation aborted at CRISPRCasFinder.pl line 30.
+gitclone https://github.com/dcouvin/CRISPRCasFinder
+load module perl
+nano forloop.sh
+chmod +x forloopcas.sh
 ```
-
-I was getting a message after running that I have some package missing and after installing it (took a long time), it said I needed linux and I couldn't figure that out on windows
 
 for all 28
 ```
@@ -328,7 +299,7 @@ for all 28
 looped command 
 
 ```
-perl "$crisprcasfinder_dir/CRISPRCasFinder.pl" -in "$fna_file" -out "$crispr_output_dir" -cas -drpt
+perl "$crisprcasfinder_dir/CRISPRCasFinder.pl" -in "$fna_file" -out "$crispr_output_dir" -cas -drpt #chatgpt3.5 was used to find the command #I did this with perl5 too after installing it
 ```
 Code of forloopcas.sh: 
 
@@ -364,6 +335,12 @@ for dir in "$base_dir"/*/; do
 done
 
 echo "CRISPR array identification completed. Results saved to $results_file"
+
+```
+Command to view it 
+```
+cd prokka_output_CDS/
+ls
 ```
 
 Output = cat /home/masom0b/outputscrisprforloop/crispr_array_counts.tsv
@@ -399,5 +376,10 @@ GCF_000027305.1_ASM2730v1_genomic       0
 GCF_000091085.2_ASM9108v2_genomic       0
 
 ```
+
 It was also tested on these 14 genomes via Prokka but it gave me a different answer such that 8545.1 had 11 CRISPR arrays while 5825.1 gave me 12 and 0625.1 gave me 9. Maybe the criteria for this tool is much more intense and with more filters.
 I checked with some online tools and got zero too in all.
+
+```
+grep -c "CRISPR" prokka_output/*/*.gff
+```
