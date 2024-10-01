@@ -280,9 +280,47 @@ BEGIN failed--compilation aborted at CRISPRCasFinder.pl line 30.
 
 I was getting a message after running that I have some package missing and after installing it (took a long time), it said I needed linux and I couldn't figure that out on windows
 
+for all 28
 ```
+ ./forloopcas.sh
+```
+looped command 
 
 ```
+perl "$crisprcasfinder_dir/CRISPRCasFinder.pl" -in "$fna_file" -out "$crispr_output_dir" -cas -drpt
+```
 
-Output =
+Output = cat /home/masom0b/outputscrisprforloop/crispr_array_counts.tsv
+
+```
+GCA_000006745.1_ASM674v1_genomic        0
+GCA_000006825.1_ASM682v1_genomic        0
+GCA_000006865.1_ASM686v1_genomic        0
+GCA_000007125.1_ASM712v1_genomic        0
+GCA_000008525.1_ASM852v1_genomic        0
+GCA_000008545.1_ASM854v1_genomic        0
+GCA_000008565.1_ASM856v1_genomic        0
+GCA_000008605.1_ASM860v1_genomic        0
+GCA_000008625.1_ASM862v1_genomic        0
+GCA_000008725.1_ASM872v1_genomic        0
+GCA_000008745.1_ASM874v1_genomic        0
+GCA_000008785.1_ASM878v1_genomic        0
+GCA_000027305.1_ASM2730v1_genomic       0
+GCA_000091085.2_ASM9108v2_genomic       0
+GCF_000006745.1_ASM674v1_genomic        0
+GCF_000006825.1_ASM682v1_genomic        0
+GCF_000006865.1_ASM686v1_genomic        0
+GCF_000007125.1_ASM712v1_genomic        0
+GCF_000008525.1_ASM852v1_genomic        0
+GCF_000008545.1_ASM854v1_genomic        0
+GCF_000008565.1_ASM856v1_genomic        0
+GCF_000008605.1_ASM860v1_genomic        0
+GCF_000008625.1_ASM862v1_genomic        0
+GCF_000008725.1_ASM872v1_genomic        0
+GCF_000008745.1_ASM874v1_genomic        0
+GCF_000008785.1_ASM878v1_genomic        0
+GCF_000027305.1_ASM2730v1_genomic       0
+GCF_000091085.2_ASM9108v2_genomic       0
+
+```
 
