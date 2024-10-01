@@ -173,8 +173,10 @@ chmod +x forloop_prokka.sh
 for loop script: 
 
 ```
+#!/bin/bash
+
 base_dir="/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data"
-output_dir="/home/masom0b/ncbi_dataset/last_week/prokka"
+output_dir="/home/masom0b/ncbi_dataset/last_week/prokka_output_CDS"
 
 mkdir -p "$output_dir"
 
@@ -185,7 +187,6 @@ for dir in "$base_dir"/*/; do
     fna_files=($(find "$dir" -name "*GCF*.fna"))
 
     if [[ ${#fna_files[@]} -eq 0 ]]; then
-        echo "No .fna files found in $dir"
         continue
     fi
 
@@ -199,7 +200,6 @@ for dir in "$base_dir"/*/; do
         gff_file="$prokka_output_dir/${base_name}.gff"
 
         if [[ ! -f "$gff_file" ]]; then
-            echo "Prokka failed for $fna_file" >> "$results_file"
             continue
         fi
 
@@ -212,8 +212,8 @@ for dir in "$base_dir"/*/; do
 done
 
 echo "CDS counts have been saved to $results_file"
-
 ```
+
 ```
 Output = prokka_results.txt - Max CDS Count ( CF_000006745.1/GCF_000006745.1_ASM674v1_genomic.fna : 3589 )
 ```
