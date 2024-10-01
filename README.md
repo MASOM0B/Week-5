@@ -127,9 +127,26 @@ command:
 chmod +x forloop_prodigal.sh
 ./forloop_prodigal.sh
 ```
-
+```
 Output = GCF_000006745.1_ASM674v1_genomic : 3594 genes
-
+```
+```
+Output =
+GCF_000006745.1_ASM674v1_genomic 3594
+GCF_000006825.1_ASM682v1_genomic 2032
+GCF_000006865.1_ASM686v1_genomic 2383
+GCF_000007125.1_ASM712v1_genomic 3152
+GCF_000008525.1_ASM852v1_genomic 1579
+GCF_000008545.1_ASM854v1_genomic 1866
+GCF_000008565.1_ASM856v1_genomic 3248
+GCF_000008605.1_ASM860v1_genomic 1009
+GCF_000008625.1_ASM862v1_genomic 1776
+GCF_000008725.1_ASM872v1_genomic 897
+GCF_000008745.1_ASM874v1_genomic 1063
+GCF_000008785.1_ASM878v1_genomic 1505
+GCF_000027305.1_ASM2730v1_genomic 1748
+GCF_000091085.2_ASM9108v2_genomic 1057 
+```
 git push: 
 git add 
 git commit -m name
