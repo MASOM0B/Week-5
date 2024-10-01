@@ -210,20 +210,21 @@ grep -h "CDS count" prokka_output_CDS/* | cut -d':' -f2
 CDS COUNT
 
 ```
- 3713
- 2105
- 2464
- 3214
- 1618
- 1911
- 3302
- 1053
- 1822
- 936
- 1100
- 1545
- 1825
- 1094
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000007125.1/GCF_000007125.1_ASM712v1_genomic.fna: 3150
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008545.1/GCF_000008545.1_ASM854v1_genomic.fna: 1861
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008565.1/GCF_000008565.1_ASM856v1_genomic.fna: 3245
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008625.1/GCF_000008625.1_ASM862v1_genomic.fna: 1771
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008725.1/GCF_000008725.1_ASM872v1_genomic.fna: 892
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000006745.1/GCF_000006745.1_ASM674v1_genomic.fna: 3589
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000006825.1/GCF_000006825.1_ASM682v1_genomic.fna: 2028
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000006865.1/GCF_000006865.1_ASM686v1_genomic.fna: 2383
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008605.1/GCF_000008605.1_ASM860v1_genomic.fna: 1001
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008785.1/GCF_000008785.1_ASM878v1_genomic.fna: 1504
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008525.1/GCF_000008525.1_ASM852v1_genomic.fna: 1577
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000008745.1/GCF_000008745.1_ASM874v1_genomic.fna: 1058
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000027305.1/GCF_000027305.1_ASM2730v1_genomic.fna: 1748
+/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000091085.2/GCF_000091085.2_ASM9108v2_genomic.fna: 1052
+
 ```
 
 (ii) Thoughts on differences
@@ -398,4 +399,5 @@ GCF_000027305.1_ASM2730v1_genomic       0
 GCF_000091085.2_ASM9108v2_genomic       0
 
 ```
-
+It was also tested on via Prokka but it gave me a difference answer as I have getting . Maybe the criteria for this tool is much more intense.
+I checked with some online tools and got zero too.
