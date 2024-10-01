@@ -178,22 +178,20 @@ output_dir="/home/masom0b/ncbi_dataset/week_5/prokka_output_CDS"
 
 mkdir -p "$output_dir"
 
-results_file="$output_dir/prokka_results.txt"
-> "$results_file"
+results_file="$output_dir/prokka_results.txt" > "$results_file"
 
 for dir in "$base_dir"/*/; do
     fna_file=$(find "$dir" -name "*GCF*.fna")
 
     if [[ -f "$fna_file" ]]; then
-        base_name=$(basename "$fna_file" .fna)
+        base_name=$(basename "$fna_file" .fna) #Omar and Ashhad helped me in this part (I was getting a different answer for Prokka)
 
         prokka_output_dir="$output_dir/${base_name}_prokka_output"
 
-        # Annotate using Prokka or Prodigal (adjusted for Prodigal here)
-        prokka --outdir "$prokka_output_dir" --prefix "$base_name" --force "$fna_file" --quiet
+        prokka --outdir "$prokka_output_dir" --prefix "$base_name" --force "$fna_file" --quiet #ChatGPT3.5 was used for this command debugging and correct syntax 
 
         gff_file="$prokka_output_dir/${base_name}.gff"
-        # Adjust for Prodigal output: Count lines with CDS entries (look for 'ID=')
+
         cds_count=$(grep -c "ID=" "$gff_file")
 
         echo "Genome: $base_name" >> "$results_file"
@@ -207,6 +205,7 @@ echo "CDS counts have been saved to $results_file"
 ```
 Output = prokka_results.txt - Max CDS Count ( CF_000006745.1/GCF_000006745.1_ASM674v1_genomic.fna : 3589 )
 ```
+
 ```
 CDS COUNTS ALL:
 
