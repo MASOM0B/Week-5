@@ -16,7 +16,13 @@ aa_sequence = "KVRMFTSELDIMLSVNG-PADQIKYFCRHWT*"
 aa(aa_sequence)
 
 ```
-run command: python3 aa.py
+run command: 
+
+
+```
+python3 aa.py
+```
+
 Output = 30
 
 (ii) Bases count including the stop codon
@@ -33,7 +39,10 @@ def bases(aa_sequence):
 aa_sequence = "KVRMFTSELDIMLSVNG-PADQIKYFCRHWT*"
 bases(aa_sequence)
 ```
-command = python3 bases.py
+command: 
+```
+python3 bases.py
+```
 
 Output = 93
 
@@ -48,7 +57,10 @@ module load prodigal/2.6.3
 prodigal -i GCA_000006865.1_ASM686v1_genomic.fna -o prodigal_output.gbk -a prodigal_output.faa -d prodigal_output.ffn
 ```
 
-Output = prodigal_output.faa  prodigal_output.ffn  prodigal_output.gbk files  
+Output:
+```
+prodigal_output.faa  prodigal_output.ffn  prodigal_output.gbk files  
+```
 
 (ii) Max Gene Count Strain
 
@@ -118,8 +130,10 @@ chmod +x forloop_prodigal.sh
 
 Output = GCF_000006745.1_ASM674v1_genomic : 3594 genes
 
-gitpush: connect and push like the last assi
-
+git push: 
+git add 
+git commit -m name
+git push 
 
 ## 4
 commands:
@@ -132,12 +146,10 @@ chmod +x forloop_prokka.sh
 
 (i) Prokka x 28 + CDS 
 
-command:
-
 ```
-touch
-
-
+touch forloop_prokka.sh
+nano forloop_prokka.sh
+chmod +x forloop_prokka.sh
 ```
 
 forloop script: 
