@@ -283,7 +283,7 @@ aaeA_2
 aaeB
 ```
 
-## 6 CRISPR CAS FINDER
+## 6 CRISPR CAS FINDER (BONUS)
 
 ```
 gitclone https://github.com/dcouvin/CRISPRCasFinder
