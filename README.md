@@ -203,9 +203,8 @@ done
 echo "CDS counts have been saved to $results_file"
 
 ```
-Output = prokka_results.txt - Max CDS Count ( CF_000006745.1/GCF_000006745.1_ASM674v1_genomic.fna : 3589 )
 ```
-
+Output = prokka_results.txt - Max CDS Count ( CF_000006745.1/GCF_000006745.1_ASM674v1_genomic.fna : 3589 )
 ```
 CDS COUNTS ALL:
 
