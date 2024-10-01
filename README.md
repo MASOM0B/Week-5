@@ -169,11 +169,11 @@ nano forloop_prokka.sh
 chmod +x forloop_prokka.sh
 ```
 
-forloop script: 
+for loop script: 
 
 ```
-base_dir="/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data"
-output_dir="/home/masom0b/ncbi_dataset/last_week/prokka_output_CDS"
+base_dir="/home/masom0b/ncbi_dataset/week_5/ncbi_dataset/data"
+output_dir="/home/masom0b/ncbi_dataset/week_5/prokka_output_CDS"
 
 mkdir -p "$output_dir"
 
@@ -188,9 +188,11 @@ for dir in "$base_dir"/*/; do
 
         prokka_output_dir="$output_dir/${base_name}_prokka_output"
 
+        # Annotate using Prokka or Prodigal (adjusted for Prodigal here)
         prokka --outdir "$prokka_output_dir" --prefix "$base_name" --force "$fna_file" --quiet
 
         gff_file="$prokka_output_dir/${base_name}.gff"
+        # Adjust for Prodigal output: Count lines with CDS entries (look for 'ID=')
         cds_count=$(grep -c "ID=" "$gff_file")
 
         echo "Genome: $base_name" >> "$results_file"
@@ -200,14 +202,12 @@ for dir in "$base_dir"/*/; do
 done
 
 echo "CDS counts have been saved to $results_file"
-```
-Output = prokka_results.txt
 
 ```
-grep -h "CDS count" prokka_output_CDS/* | cut -d':' -f2
+Output = prokka_results.txt ( 3589 max CDS count )
 
 ```
-CDS COUNT
+CDS COUNTS ALL 
 
 ```
 /home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data/GCF_000007125.1/GCF_000007125.1_ASM712v1_genomic.fna: 3150
