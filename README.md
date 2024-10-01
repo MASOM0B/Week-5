@@ -247,9 +247,9 @@ Prokka Output Files:
 .sqn
 ```
 
-And I noticed that Prokka actually used Prodigal and the number of genes were slightly different 
-prokka: Comprehensive genome annotation Annotates CDS, tRNAs, rRNAs, pseudogenes, and non-coding elements Functional annotation using databases ; takes a lot more time to run
-prodigal: CDS oriented 
+Prokka actually used Prodigal and the number of genes were slightly different.
+prokka: Comprehensive genome annotation Annotates CDS, tRNAs, rRNAs, pseudogenes, and non-coding elements Functional annotation using databases ; takes a lot more time to run and has more filters.
+prodigal: CDS oriented only
 
 ## 5
 
