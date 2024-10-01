@@ -76,7 +76,7 @@ Output = 2383
 
 ## 3
 
-(i) Prodigal x 28 
+(i) Prodigal x 14 
 
 Commands to initiate the prodigal loop file
 
@@ -161,7 +161,7 @@ chmod +x forloop_prokka.sh
 ./forloop_prokka.sh
 ```
 
-(i) Prokka x 28 + CDS 
+(i) Prokka x 14 + CDS 
 
 ```
 touch forloop_prokka.sh
