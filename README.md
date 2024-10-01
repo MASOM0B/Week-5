@@ -399,5 +399,5 @@ GCF_000027305.1_ASM2730v1_genomic       0
 GCF_000091085.2_ASM9108v2_genomic       0
 
 ```
-It was also tested on these 14 genomes via Prokka but it gave me a different answer such that 8545.1 had 11 CRISPR arrays while 5825.1 gave me 12. Maybe the criteria for this tool is much more intense and with more filters.
+It was also tested on these 14 genomes via Prokka but it gave me a different answer such that 8545.1 had 11 CRISPR arrays while 5825.1 gave me 12 and 0625.1 gave me 9. Maybe the criteria for this tool is much more intense and with more filters.
 I checked with some online tools and got zero too in all.
