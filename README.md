@@ -309,7 +309,7 @@ for all 28 files
 looped command 
 
 ```
-perl "$crisprcasfinder_dir/CRISPRCasFinder.pl" -in "$fna_file" -out "$crispr_output_dir" -cas -drpt #chatgpt3.5 was used to find the command #I did this with perl5 too after installing it
+perl "$crisprcasfinder_dir/CRISPRCasFinder.pl" -in "$fna_file" -out "$crispr_output_dir" -cas -drpt #chatgpt3.5 was used to find the command #I did this with perl5 too after installing it and in perl it asked me to download 2 modules before I could run it using cpan
 ```
 Code of forloopcas.sh: 
 
