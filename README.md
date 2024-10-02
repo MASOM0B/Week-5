@@ -176,7 +176,7 @@ for loop script:
 #!/bin/bash
 
 base_dir="/home/masom0b/ncbi_dataset/last_week/ncbi_dataset/data"
-output_dir="/home/masom0b/ncbi_dataset/last_week/prokka_output_CDS"
+output_dir="/home/masom0b/ncbi_dataset/last_week/prokka"
 
 mkdir -p "$output_dir"
 
