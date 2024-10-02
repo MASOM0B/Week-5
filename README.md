@@ -239,6 +239,10 @@ CDS COUNTS ALL:
 
 (ii) Thoughts on differences
 
+Prokka actually used Prodigal and the number of genes was slightly different.
+prokka: Comprehensive genome annotation Annotates CDS, tRNAs, rRNAs, pseudogenes, and non-coding elements Functional annotation using databases; takes a lot more time to run and has more filters. This is why Prokka gave us fewer genes.
+prodigal: CDS oriented only with less run time so it would have fewer filters, hence fewer files too.
+
 Prodigal Output Files:
 ```
 .gbk
@@ -257,10 +261,6 @@ Prokka Output Files:
 .txt
 .sqn
 ```
-
-Prokka actually used Prodigal and the number of genes was slightly different.
-prokka: Comprehensive genome annotation Annotates CDS, tRNAs, rRNAs, pseudogenes, and non-coding elements Functional annotation using databases; takes a lot more time to run and has more filters. This is why Prokka gave us less genes.
-prodigal: CDS oriented only with less run time so it would have less filters, hence less files too.
 
 ## 5
 
@@ -284,6 +284,7 @@ head -n 5 unique_gene_names.txt
 ```
 
 Output = 
+
 ```
 aaaT
 aaeA
@@ -301,7 +302,7 @@ nano forloop.sh
 chmod +x forloopcas.sh
 ```
 
-for all 28
+for all 28 files
 ```
  ./forloopcas.sh
 ```
